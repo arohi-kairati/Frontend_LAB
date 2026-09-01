@@ -1,0 +1,105 @@
+html {
+    width: 100%;
+}
+
+body {
+    position: relative;
+    background-color: rgb(246, 219, 61);
+    width: 50%;
+    margin: 8rem auto 0 auto;
+    /* outline: 2px solid black; */
+}
+
+header {
+    padding-left: 1rem;
+    border-left: 0.5rem solid rgb(202, 0, 51);
+}
+
+main {
+    /* width: inherit; */
+    display: flex;
+    justify-content:center ;
+    /* gap: 2rem; */
+}
+
+main .divider {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Climate Crisis", sans-serif;
+    font-weight: 100;
+    color: rgb(58, 58, 58);
+}
+
+h2, h3 {
+    color: rgb(49, 49, 49);
+    font-family: "Roboto", sans-serif;;
+}
+
+h4 {
+    margin: 0;
+    font-family: "Betania Patmos", cursive;
+}
+
+p {
+    margin-top: 6px;
+    color: rgb(48, 48, 48);
+    font-family: "Roboto", sans-serif;
+}
+
+.boxes {
+    width: 220px;
+    height: 140px;
+    display: block;
+    margin: 2rem;
+    padding: 0.5rem 3rem;
+    background-color: beige;
+    border-radius: 80px;
+    box-shadow: 8px 8px 2px red;
+    /* outline-l: 2px solid red; */
+}
+
+
+
+
+.shape {
+    position: absolute;
+    z-index: -1;
+}
+
+.shape-1 {
+    bottom: 20rem;
+    left: 50rem;
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.668);
+}
+
+.shape-2 {
+    bottom: 10rem;
+    left: 65rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgba(251, 99, 99, 0.552);
+}
+
+.shape-3 {
+    top: 20rem;
+    right: 50rem;
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.668);
+}
+
+.shape-4 {
+    top: 10rem;
+    right: 65rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgba(251, 99, 99, 0.552);
+}

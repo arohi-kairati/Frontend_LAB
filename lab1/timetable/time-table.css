@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    border-color: rgb(182, 39, 139);
+}
+
+th {
+    height: 4rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+td {
+    height: 3rem;
+    text-align: center;
+    background-color: rgb(247, 227, 244);
+}
+
+.day {
+    background-color: rgb(107, 106, 106);
+    color: white;
+}
