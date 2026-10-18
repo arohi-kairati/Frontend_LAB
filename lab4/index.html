@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles-header.css">
+    <link rel="stylesheet" href="styles-main-footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="navbar">
+        <p id="title">🚀 Space Explorer</p>
+
+        <button class="menu-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#spaceMenu"
+                aria-expanded="false"
+                aria-controls="spaceMenu"
+                aria-label="Toggle navigation">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </button>
+    </header>
+
+    <nav class="menu collapse" id="spaceMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#mission">Missions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <main>
+        <section class="main-1">
+            <span class="left-side">
+                <h1>Explorer The Universe</h1>
+                <p>Discover planets, stars and galaxies beyond our imagination.</p>
+                <button id="explore-btn">Start Exploring</button>
+            </span>
+            <span class="right-side">
+                <span class="rocket">🚀</span>
+                <span class="astronaut">🧑🏽‍🚀</span>
+            </span>
+        </section>
+
+        <section class="main-2">
+            <div id="about">
+                <p class="head1">About Space Exploration</p>
+                <p class="head3">Space exploration helps us understand the universe and discover new possibilities.</p>
+            </div>
+            <div id="mission">
+                <p class="head1" style="margin-top: 0;">Our Missions</p>
+                <span class="all-mission">
+                    <span class="mission-name">
+                        <p class="head2">Moon Mission</p>
+                        <p class="head3">Explore the surface and secrets of the Moon.</p>
+                    </span>
+                    <span class="mission-name">
+                        <p class="head2">Mars Mission</p>
+                        <p class="head3">Study the surface and environment of Mars.</p>
+                    </span>
+                    <span class="mission-name">
+                        <p class="head2">Deep Space</p>
+                        <p class="head3">Discover distant stars and unknown galaxies.</p>
+                    </span>
+                </span>
+            </div>
+            <div id="contact">
+                <p class="head1">Contact Us</p>
+                <p class="head3">Email: space@example.com</p>
+                <button id="contact-btn">Contact Us</U></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Space Explorer</p>
+    </footer>
+</body>
+</html>

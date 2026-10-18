@@ -1,0 +1,141 @@
+/* main-1 */
+
+.main-1 {
+    padding-top: 10rem;
+    background-color: rgb(0, 0, 58);
+    color: white;
+    margin: 0;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#title {
+    padding-left: 4rem;
+}
+
+h1{
+    margin-top: 0;
+}
+
+.left-side{
+    padding-left: 4rem;
+}
+
+#explore-btn{
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: rgb(0, 115, 255);
+}
+
+.right-side {
+    display: flex;
+    padding-right: 6rem;
+}
+
+.rocket{
+    margin-right: 2rem;
+    font-size: 4rem;
+    animation: rocket 3s alternate infinite;
+}
+
+@keyframes rocket {
+    0%, 100%{
+        transform: translate(0px, 20px) rotate(-20deg);
+    }
+    50%{
+        transform: translate(40px, -80px) rotate(10deg);
+    }
+}
+
+.astronaut{
+    font-size: 3rem;
+    animation: astronaut 3s alternate infinite;
+}
+
+@keyframes astronaut {
+    0%, 100%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* main-2 */
+
+.main-2 {
+    text-align: center;
+}
+
+.all-mission{
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+.mission-name{
+    margin: 0 1rem;
+    background-color: white;
+    padding: 0 0.75rem;
+    padding-top: 1rem;
+    border: 1.5px solid rgb(224, 224, 224);
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.mission-name:hover {
+    transform: translateY(-10px);
+}
+
+#about{
+    padding: 2rem;
+}
+
+#mission{
+    padding: 2rem;
+    background-color: rgb(240, 240, 240);
+    
+}
+
+#contact{
+    margin: 2rem;
+}
+
+.head1{
+    font-size: x-large;
+}
+
+.head2{
+    font-size: larger;
+}
+
+.head3{
+    font-size: smaller;
+}
+
+#contact-btn{
+    border: none;
+    background-color: rgb(1, 131, 68);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+
+/* footer */
+
+footer{
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
+footer p{
+    margin: 0;
+    padding: 0.5rem;
+}
