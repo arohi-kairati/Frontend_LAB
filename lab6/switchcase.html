@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let category = prompt("Enter the electricity category.");
+        let units = Number(prompt("Enter the number of units."));
+        switch(category.toLowerCase()){
+            case "domestic":
+                console.log(5 * units);
+                break;
+            case "commercial":
+                console.log(8 * units);
+                break;
+            case "Industrial":
+                console.log(10 * units);
+                break;
+            default:
+                console.log("Invalid Category");
+        }
+    </script>
+</body>
+</html>
