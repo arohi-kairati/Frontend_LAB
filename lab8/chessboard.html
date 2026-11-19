@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Dynamic Chessboard</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #chessboard {
+            display: grid;
+
+            grid-template-columns: repeat(8, 60px);
+
+            grid-template-rows: repeat(8, 60px);
+
+            width: 480px;
+            margin: auto;
+
+            border: 3px solid black;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Dynamic Chessboard</h2>
+
+    <div id="chessboard"></div>
+
+    <script>
+
+        let board = document.getElementById("chessboard");
+
+        // Outer loop represents rows
+        for (let i = 0; i < 8; i++) {
+
+            // Inner loop represents columns
+            for (let j = 0; j < 8; j++) {
+
+                // Create a new cell
+                let cell = document.createElement("div"); //i=0,j=1
+
+                cell.classList.add("cell");
+
+                // Apply alternating colors
+                if ((i + j) % 2 === 0) { //odd black // 0+1 = 1 %2 ===  1 === 0
+
+                    cell.classList.add("white"); 
+
+                }
+                else { // even white
+
+                    cell.classList.add("black");
+
+                }
+
+                // Add cell to chessboard
+                board.appendChild(cell);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

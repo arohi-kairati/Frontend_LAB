@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+        }
+
+        button {
+            padding: 8px;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        li {
+            background: #eeeeee;
+            padding: 10px;
+            margin: 10px 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .task-text {
+            flex: 1;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Advanced To-Do List</h2>
+
+        <input type="text" id="taskInput"
+               placeholder="Enter your task">
+
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script>
+
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+
+            let task = input.value.trim();
+
+            if (task === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            let li = document.createElement("li");
+
+            // Create checkbox
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            // Create task text
+            let span = document.createElement("span");
+            span.innerHTML = task;
+            span.className = "task-text";
+
+            // Mark task as completed
+            checkbox.addEventListener("change", function() {
+
+                if (checkbox.checked) {
+                    span.classList.add("completed");
+                }
+                else {
+                    span.classList.remove("completed");
+                }
+
+            });
+
+            // Move Up Button
+            let upBtn = document.createElement("button");
+            upBtn.innerHTML = "↑";
+
+            upBtn.onclick = function() {
+
+                let previous = li.previousElementSibling;
+
+                if (previous) {
+                    li.parentNode.insertBefore(li, previous);
+                }
+
+            };
+
+            // Move Down Button
+            let downBtn = document.createElement("button");
+            downBtn.innerHTML = "↓";
+
+            downBtn.onclick = function() {
+
+                let next = li.nextElementSibling;
+
+                if (next) {
+                    li.parentNode.insertBefore(next, li);
+                }
+
+            };
+
+            // Delete Button
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "Delete";
+
+            deleteBtn.onclick = function() {
+                li.remove();
+            };
+
+            // Append all elements
+            li.append(
+                checkbox,
+                span,
+                upBtn,
+                downBtn,
+                deleteBtn
+            );
+
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+
+        }
+
+    </script>
+
+</body>
+</html>
