@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Data Fetching</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Server Data Fetching</h2>
+
+        <button onclick="fetchData()">Fetch Data</button>
+
+        <div id="result">Click the button to fetch data.</div>
+
+    </div>
+
+    <script>
+
+        // Function to simulate server data fetching
+        function fetchData() {
+
+            let result = document.getElementById("result");
+
+            result.innerHTML = "Loading data...";
+
+            // Creating a Promise
+            let promise = new Promise(function(resolve, reject) {
+
+                // Simulating server delay
+                setTimeout(function() {
+
+                    let serverData = {
+                        name: "Meghana",
+                        course: "Java Full Stack",
+                        department: "Computer Science"
+                    };
+
+                    // Sending successful response
+                    resolve(serverData);
+
+                }, 3000);
+
+            });
+
+            // Handling resolved Promise
+            promise.then(function(data) {
+
+                result.innerHTML = `
+                    <h3>Data Received Successfully!</h3>
+                    <p>Name: ${data.name}</p>
+                    <p>Course: ${data.course}</p>
+                    <p>Department: ${data.department}</p>
+                `;
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
