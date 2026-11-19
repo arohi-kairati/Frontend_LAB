@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 6</title>
+</head>
+<body>
+
+    <h2>JavaScript Functions and Array Methods</h2>
+
+    <script>
+        // 1. Function
+        function calculateTotal(price, quantity) {
+            return price * quantity;
+        }
+
+        console.log("1. Function:");
+        console.log("Total Price:", calculateTotal(100, 3));
+
+
+        // 2. Closure
+        function counter() {
+            let count = 0;
+
+            return function () {
+                count++; // //count=count+1// 0+1 --> 
+                return count; //1
+            };
+        }
+
+        const increment = counter();
+
+        console.log("2. Closure:");
+        console.log(increment());
+        console.log(increment());
+        console.log(increment());
+        console.log(increment());
+         console.log(increment());
+
+
+        // 3. IIFE
+        (function () {
+            let message = "This is an IIFE";
+            console.log(`3. IIFE is: ${message} `);
+        })();
+
+
+        // 4. Array methods
+        const numbers = [10, 20, 30, 40, 50];
+        
+        // map(): Double each number
+        const doubled = numbers.map(num => num * 2);
+
+        console.log("4. map():", doubled);
+
+
+        // filter(): Get numbers greater than 25
+        const filtered = numbers.filter(num => num > 25);
+
+        console.log("5. filter():", filtered);
+
+
+        // reduce(): Calculate sum of all numbers
+        const sum = numbers.reduce((total, num) => total + num, 0); // 150 
+
+        console.log("6. reduce():", sum);
+
+
+        // forEach(): Print each number
+        console.log("7. forEach():");
+
+        numbers.forEach(num => {
+            console.log(num);
+        });
+
+    
+    </script>
+
+</body>
+</html>
