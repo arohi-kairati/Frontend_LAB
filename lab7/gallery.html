@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .gallery {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #mainImage {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .thumbnails img {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 5px;
+        }
+
+        .thumbnails img:hover {
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery">
+        <h2>My Image Gallery</h2>
+
+        <img id="mainImage"
+             src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900"
+             alt="Main landscape image">
+
+        <div class="thumbnails">
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900"
+                alt="Landscape"
+                data-large="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900">
+
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900"
+                alt="Mountain"
+                data-large="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900">
+
+            <img
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900"
+                alt="Sunrise"
+                data-large="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900">
+
+            <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900"
+                alt="Lake"
+                data-large="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900">
+        </div>
+    </div>
+
+    <script>
+        const mainImage = document.getElementById("mainImage");
+
+        const thumbnails =
+            document.querySelectorAll(".thumbnails img");
+
+        thumbnails.forEach(function (thumbnail) {
+
+            thumbnail.addEventListener("click", function () {
+
+                mainImage.src = thumbnail.dataset.large;
+                mainImage.alt = thumbnail.alt;
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
